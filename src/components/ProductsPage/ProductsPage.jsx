@@ -1,0 +1,52 @@
+import React, { useEffect, useState } from 'react';
+import { getPopularCategories } from '../../api/Api';
+import axios from 'axios';
+import vannaya from "../../img/vannaya.jpg"
+import kuchnia from "../../img/kuchnia.jpeg"
+import podokonnik from "../../img/podokonnik.png"
+import css from "./produt.module.css";
+
+
+
+const products = [
+    {"image": vannaya, title: 'Столешницы из камня для ванной комнаты', subtitle: 'Выбрать идеальную столешницу для ванной комнаты очень просто. Нужно понять какие есть возможности в изготовлении, какие цвета и фактуры камня больше всего подходят к материалам и отделке вашей кухни. Лучше вдохновится идеями самых разных проектов - искусственный камень даёт практически неограниченные возможности для дизайна.'},
+    {"image": kuchnia, title: 'Столешницы из камня для кухни', subtitle: 'Вы делаете ремонт и решили выбрать столешницу на кухню. Но вот с чего начать? Мы предлагаем простой пошаговый план действий, основанный на нашем многолетнем опыте и отзывах наших клиентов. Самое важное — потратьте время на планирование — это сохранит ваши нервы и деньги.'},
+    {"image": podokonnik, title: 'Подоконники из камня', subtitle: 'Какой бы материал вы ни выбрали – акриловый камень или кварцевый агломерат, в любом случае оконный проем с этим подоконником будет выглядеть роскошно, а многообразие цветовых решений и фактур, которые мы предлагаем, создадут пространство для вашего творчества и фантазии.'},  
+]
+
+export const ProductsPage = () => {
+    // const [category, setCategory] = useState({})
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       const result = await axios(
+    //         '',
+    //       );
+    
+    //       setCategory(result.data);
+    //     };
+    
+    //     fetchData();
+    //   }, []);
+
+
+
+
+    //   console.log(category);
+
+    return <div className={css.main}>
+      <h1 className={css.title}>Найди новые идеи и вдохновись нашими работами</h1>
+      <div className={css.product}>
+        {products.map((product) => (
+          <div className={css.wrapper}>
+            <img className={css.img} src={product.image} alt="bathroom" />
+            <h2>{product.title}</h2>
+            <p>{product.subtitle}</p>
+          </div>
+            
+
+        ))}
+      </div>
+    </div>;
+}
+

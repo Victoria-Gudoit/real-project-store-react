@@ -1,0 +1,20 @@
+import React from 'react';
+import { Slider } from './components/Slider';
+import css from "./style.module.css";
+import img01 from "./img/img-01.jpg"
+import img02 from "./img/img-02.jpg"
+import { ProductsPage } from './components/ProductsPage/ProductsPage';
+
+
+const swiperImages = [
+    {"image": img01, title: 'MODERN STONE PRODUCTS', subtitle: 'вы можете у нас:', btn: 'рассчитать стоимость', path: 'calculator' },
+    {"image": img02, title: 'MODERN STONE PRODUCTS', subtitle: 'вы можете у нас:', btn: 'рассчитать стоимость', path: 'materials'},
+]
+
+export const MainPage = () => {
+    return <div>
+        <Slider swiperImages={swiperImages}/>
+        {/* <ProductsPage/> */}
+    </div>;
+}
+

@@ -1,0 +1,22 @@
+.btn {
+    background-color: #A9845C;
+    width: 14rem;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+}
+
+.btn:hover {
+    background-color: #926341;
+}
+
+@media (max-width: 600px) {
+    .btn {
+      width: 12rem;
+      height: 3.4rem;
+      font-size: 1.7rem;
+    }}
