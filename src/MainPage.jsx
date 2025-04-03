@@ -23,6 +23,7 @@ const swiperImages = [
 export const MainPage = () => {
   return (
     <div>
+      
       <Slider swiperImages={swiperImages} />
     </div>
   );

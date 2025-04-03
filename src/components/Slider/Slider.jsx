@@ -19,7 +19,7 @@ import { Calculator } from "../CalculatorModal";
 import { useState } from "react";
 export const Slider = ({ swiperImages }) => {
   const [modalActive, setModalActive] = useState(false);
-  console.log(modalActive);
+  const [heroSwiper, setSwiperRef] = useState(null);
 
   let circleClasses = classNames({
     circle: true,
@@ -47,19 +47,27 @@ export const Slider = ({ swiperImages }) => {
     setModalActive(true);
   };
 
+  const playHero = () => {
+    heroSwiper.autoplay.start();
+  };
+
+  const pauseHero = () => {
+    heroSwiper.autoplay.stop();
+  };
   return (
     <div className="wrapper">
       <Swiper
+        ref={heroSwiper}
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
         autoplay={{
-          delay: 55000,
+          delay: 2200,
           disableOnInteraction: false,
         }}
         spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={setSwiperRef}
         onSlideChange={() => console.log("slide change")}
       >
         {swiperImages.map((swiperImage) => (
@@ -72,10 +80,15 @@ export const Slider = ({ swiperImages }) => {
               to={`/${swiperImage.path}`}
               className={btnClasses}
               onClick={openModal}
+              onPointerUp={pauseHero}
             >
               {swiperImage.btn}
             </MyButton>
-            <Calculator active={modalActive} setActive={setModalActive} />
+            <Calculator
+              playHero={playHero}
+              active={modalActive}
+              setActive={setModalActive}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -3,7 +3,7 @@ import "./calculator.css";
 import emailjs from "@emailjs/browser";
 import validator from "validator";
 
-export const Calculator = ({ active, setActive }) => {
+export const Calculator = ({ active, setActive, playHero }) => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [emailError, setEmailError] = useState("");
   const validateEmail = (e) => {
@@ -13,8 +13,8 @@ export const Calculator = ({ active, setActive }) => {
       setEmailError("Корректный Email :)");
       setBtnDisabled(!true);
     } else {
-      setEmailError("Некорректный Email!"); 
-       setBtnDisabled(true);
+      setEmailError("Некорректный Email!");
+      setBtnDisabled(true);
     }
   };
 
@@ -32,6 +32,7 @@ export const Calculator = ({ active, setActive }) => {
     <div
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}
+      onPointerUp={playHero}
     >
       <div
         className={active ? "modal__content active" : "modal__content"}
