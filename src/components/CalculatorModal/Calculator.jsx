@@ -12,8 +12,6 @@ export const Calculator = ({ active, setActive }) => {
     if (validator.isEmail(email)) {
       setEmailError("Корректный Email :)");
       setBtnDisabled(!true);
-
-    
     } else {
       setEmailError("Некорректный Email!"); 
        setBtnDisabled(true);
