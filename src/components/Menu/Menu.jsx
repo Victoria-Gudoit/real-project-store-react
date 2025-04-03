@@ -10,7 +10,7 @@ export const Menu = ({ header, items, active, setActive }) => {
     >
       <div className="blur" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
-        <div className="menu__header">{header}</div>
+        <Link className="menu__header" to="/">{header}</Link>
         <ul className="menu__list" onClick={() => setActive(false)}>
           {items.map((item) => (
             <li key={item.href}>

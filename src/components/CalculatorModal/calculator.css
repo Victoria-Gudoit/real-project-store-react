@@ -79,6 +79,19 @@
   background-color: #926341;
 }
 
+.form-error {
+  font-weight: bold;
+  color: red;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  padding-left: 2rem;
+}
+@media (max-width:1200px) {
+.form-inner input[type="submit"]  {
+cursor: default;
+}
+} 
+
 @media (max-width: 500px) {
   .modal {
     height: 100%;

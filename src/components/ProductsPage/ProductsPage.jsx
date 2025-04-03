@@ -2,7 +2,7 @@ import React from "react";
 import vannaya from "../../img/vannaya.jpg";
 import kuchnia from "../../img/kuchnia.jpeg";
 import podokonnik from "../../img/podokonnik.png";
-import css from "./produt.module.css";
+import css from "../OurWorks/works.module.css";
 
 const products = [
   {
@@ -23,20 +23,22 @@ const products = [
     subtitle:
       "Какой бы материал вы ни выбрали – акриловый камень или кварцевый агломерат, в любом случае оконный проем с этим подоконником будет выглядеть роскошно, а многообразие цветовых решений и фактур, которые мы предлагаем, создадут пространство для вашего творчества и фантазии.",
   },
+
+
 ];
 
 export const ProductsPage = () => {
   return (
     <div className={css.main}>
       <h1 className={css.title}>
-        Найди новые идеи и вдохновись нашими работами
+        Найди новые идеи и вдохновись
       </h1>
-      <div className={css.product}>
+      <div className={css.work}>
         {products.map((product) => (
-          <div className={css.wrapper}>
-            <img className={css.img} src={product.image} alt="bathroom" />
-            <h2>{product.title}</h2>
-            <p>{product.subtitle}</p>
+          <div key={product.title} className={css.wrapper}>
+            <img className={css.img} src={product.image} alt={product.title} />
+            <h2 className={css.text}>{product.title}</h2>
+            <p className={css.text}>{product.subtitle}</p>
           </div>
         ))}
       </div>
