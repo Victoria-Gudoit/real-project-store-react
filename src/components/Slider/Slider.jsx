@@ -60,7 +60,7 @@ export const Slider = ({ swiperImages }) => {
         ref={heroSwiper}
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
         autoplay={{
-          delay: 2200,
+          delay: 5200,
           disableOnInteraction: false,
         }}
         spaceBetween={50}
