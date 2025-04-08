@@ -85,7 +85,11 @@
     display: block;
   }
 
-  .list {
+  .items {
+    display: none;
+  }
+
+  .btns {
     display: none;
   }
 

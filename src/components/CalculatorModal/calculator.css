@@ -24,6 +24,7 @@
 }
 
 .modal__content {
+  position: relative;
   padding: 20px;
   border-radius: 12px;
   background-color: #fff;
@@ -33,9 +34,27 @@
   transition: 0.4s all;
 }
 
+
+.modal__close:before {
+  position: absolute;
+  content: "X";
+  top: 5%;
+  left: 92%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #707981;
+  cursor: pointer;
+}
+
+.modal__close:hover::before {
+color: #3b3937;
+}
+
 .modal__content.active {
   transform: scale(1);
 }
+
+
 
 .form-inner {
   padding: 40px;

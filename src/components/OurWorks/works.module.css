@@ -51,4 +51,8 @@ align-items: center;
   .wrapper {
     width: 100%;
   }
+
+  .wrapper:hover {
+    transform: none;
+  }
 }

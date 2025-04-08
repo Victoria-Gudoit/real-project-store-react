@@ -46,23 +46,61 @@
 
 @media (max-width: 575px) {
   .circle {
-    width: 25em;
-    height: 25em;
+    width: 22em;
+    height: 22em;
   }
 
   .title {
     padding-bottom: 2rem;
-    font-size: 3.4rem;
+    font-size: 2.8rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
+  .btnSlider {
+    margin-top: 11rem;
+  }
   .circle {
-    width: 17em;
+    width: 18em;
     height: 18em;
-  }
+}
+.title {
+  font-size: 2.2rem;
+}
+.subTitle {
+  margin-top: 5rem;
+}
+}
 
-  .img {
-    height: 90vh;
+@media (max-width: 360px) {
+  .btnSlider {
+    margin-top: 10rem;
   }
+  .circle {
+    width: 16em;
+    height: 16em;
+}
+.title {
+  font-size: 2rem;
+}
+.subTitle {
+  margin-top: 4rem;
+}
+}
+
+@media (max-width: 320px) {
+  .btnSlider {
+    margin-top: 8rem;
+    padding: 2.8rem;
+  }
+  .circle {
+    width: 14em;
+    height: 14em;
+}
+.title {
+  font-size: 1.6rem;
+}
+.subTitle {
+  margin-top: 2rem;
+}
 }
