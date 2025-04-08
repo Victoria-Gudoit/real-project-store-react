@@ -42,7 +42,6 @@ export const Header = () => {
 
   return (
     <div className={css.header}>
-      {/* <a href="#top" id={"back-to-top"} className="back-to-top" title="Back to top">▲</a> */}
       <div className={css.burger} onClick={() => setMenuActive(!menuActive)}>
         <span />
       </div>

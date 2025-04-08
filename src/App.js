@@ -1,4 +1,5 @@
 import { AppRouter } from "./components/AppRouter";
+import { BackToTopButton } from "./components/BackToTopButton";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
@@ -8,6 +9,7 @@ export const App = () => {
     <div>
       <Header />
       <ScrollToTop/>
+      <BackToTopButton/>
       <AppRouter />
       <Footer />
     </div>
