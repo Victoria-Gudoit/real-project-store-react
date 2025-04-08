@@ -48,7 +48,7 @@ export const Header = () => {
       </div>
       <ul className={css.list}>
         <Link className={css.logo} to={"/"}>
-          Мастерская камня
+          Мастерская
         </Link>
         {items.map((item) => (
           <li key={item.href} className={css.items}>

@@ -33,3 +33,10 @@
 .item {
   padding-top: 1rem;
 }
+
+
+@media (max-width: 600px) {
+  .about {
+  padding: 8rem 3rem;
+}
+}

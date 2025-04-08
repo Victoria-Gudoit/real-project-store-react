@@ -6,6 +6,8 @@ import validator from "validator";
 export const Calculator = ({ active, setActive, playHero }) => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [emailError, setEmailError] = useState("");
+  const [inputEmail, setInputEmail] = useState(false);
+
   const validateEmail = (e) => {
     console.log(btnDisabled);
     const email = e.target.value;
@@ -15,6 +17,7 @@ export const Calculator = ({ active, setActive, playHero }) => {
     } else {
       setEmailError("Некорректный Email!");
       setBtnDisabled(true);
+      setInputEmail(true)
     }
   };
 
@@ -32,22 +35,23 @@ export const Calculator = ({ active, setActive, playHero }) => {
     <div
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}
-      onPointerUp={playHero}
+      
     >
       <div
         className={active ? "modal__content active" : "modal__content"}
         onClick={(e) => e.stopPropagation()}
-      >
+      > 
+      <span onClick={() => setActive(false)} class="modal__close"/>
         <form class="form-inner" onSubmit={sendEmail}>
           <h3 class="form-title">Рассчитать стоимость</h3>
-          <input
+          <input class="modal__email"
             type="text"
             name="email_from"
             id="emailFrom"
-            placeholder="Ваша почта (обязательное поле)"
+            placeholder={`Ваша почта*`}
             onChange={(e) => validateEmail(e)}
           />{" "}
-          <span class="form-error">{emailError}</span>
+          {inputEmail && <span class="form-error">{emailError}</span>}
           <input type="text" placeholder="Ваше имя" name="name" id="name" />
           <input type="tel" placeholder="Телефон" name="phone" id="phone" />
           <textarea

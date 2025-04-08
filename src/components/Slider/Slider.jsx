@@ -47,10 +47,6 @@ export const Slider = ({ swiperImages }) => {
     setModalActive(true);
   };
 
-  const playHero = () => {
-    heroSwiper.autoplay.start();
-  };
-
   const pauseHero = () => {
     heroSwiper.autoplay.stop();
   };
@@ -85,7 +81,6 @@ export const Slider = ({ swiperImages }) => {
               {swiperImage.btn}
             </MyButton>
             <Calculator
-              playHero={playHero}
               active={modalActive}
               setActive={setModalActive}
             />

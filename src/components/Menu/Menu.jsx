@@ -1,6 +1,7 @@
 import React from "react";
 import "./menu.css";
 import { Link } from "react-router-dom";
+import { MyButton } from "../UI/button/MyButton";
 
 export const Menu = ({ header, items, active, setActive }) => {
   return (
@@ -10,7 +11,6 @@ export const Menu = ({ header, items, active, setActive }) => {
     >
       <div className="blur" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
-        <Link className="menu__header" to="/">{header}</Link>
         <ul className="menu__list" onClick={() => setActive(false)}>
           {items.map((item) => (
             <li key={item.href}>
@@ -18,6 +18,10 @@ export const Menu = ({ header, items, active, setActive }) => {
             </li>
           ))}
         </ul>
+        <div className="menu__btns">
+        <MyButton to="/materials">Материалы</MyButton>
+        <MyButton to="/products">Изделия</MyButton>
+      </div>
       </div>
     </div>
   );

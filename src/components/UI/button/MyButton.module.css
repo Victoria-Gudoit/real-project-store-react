@@ -20,3 +20,10 @@
     font-size: 1.7rem;
   }
 }
+
+@media (max-width: 300px) {
+  .btn {
+      width: 10rem;
+      height: 3rem;
+      font-size: 1.5rem;
+  }}
