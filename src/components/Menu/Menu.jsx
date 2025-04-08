@@ -18,7 +18,7 @@ export const Menu = ({ header, items, active, setActive }) => {
             </li>
           ))}
         </ul>
-        <div className="menu__btns">
+        <div onClick={() => setActive(false)} className="menu__btns">
         <MyButton to="/materials">Материалы</MyButton>
         <MyButton to="/products">Изделия</MyButton>
       </div>
