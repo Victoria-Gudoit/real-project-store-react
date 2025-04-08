@@ -55,6 +55,10 @@ color: #3b3937;
 }
 
 
+.modal__email:focus {
+  outline: none;
+  border: 2px solid red;
+}
 
 .form-inner {
   padding: 40px;
@@ -86,6 +90,8 @@ color: #3b3937;
 .form-inner textarea {
   resize: none;
 }
+
+
 .form-inner h3 {
   margin-top: 0;
   font-family: "Roboto", sans-serif;
