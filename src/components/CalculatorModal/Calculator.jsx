@@ -5,19 +5,14 @@ import validator from "validator";
 
 export const Calculator = ({ active, setActive, playHero }) => {
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const [emailError, setEmailError] = useState("");
-  const [inputEmail, setInputEmail] = useState(false);
 
   const validateEmail = (e) => {
     console.log(btnDisabled);
     const email = e.target.value;
     if (validator.isEmail(email)) {
-      setEmailError("Корректный Email :)");
       setBtnDisabled(!true);
     } else {
-      setEmailError("Некорректный Email!");
       setBtnDisabled(true);
-      setInputEmail(true)
     }
   };
 
@@ -44,14 +39,14 @@ export const Calculator = ({ active, setActive, playHero }) => {
       <span onClick={() => setActive(false)} class="modal__close"/>
         <form class="form-inner" onSubmit={sendEmail}>
           <h3 class="form-title">Рассчитать стоимость</h3>
-          <input class="modal__email"
+          <input class={btnDisabled ? "modal__email" : ""}
             type="text"
             name="email_from"
             id="emailFrom"
             placeholder={`Ваша почта*`}
             onChange={(e) => validateEmail(e)}
           />{" "}
-          {inputEmail && <span class="form-error">{emailError}</span>}
+
           <input type="text" placeholder="Ваше имя" name="name" id="name" />
           <input type="tel" placeholder="Телефон" name="phone" id="phone" />
           <textarea
