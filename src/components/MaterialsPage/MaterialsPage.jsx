@@ -12,20 +12,23 @@ export const MaterialsPage = () => {
     { image: caesar, title: "Silestone" },
     { image: technistone, title: "Vicostone" },
     { image: belenco, title: "Norda" },
-
   ];
 
   return (
-    <div className={css.main}>
+    <section className={css.main}>
       <h1 className={css.title}>Кварц</h1>
       <div className={css.work}>
         {materials.map((material) => (
-          <div key={material.title} className={css.wrapper}>
-            <img className={css.img} src={material.image} alt={material.title} />
+          <article key={material.title} className={css.wrapper}>
+            <img
+              className={css.img}
+              src={material.image}
+              alt={material.title}
+            />
             <h2 className={css.text}>{material.title}</h2>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

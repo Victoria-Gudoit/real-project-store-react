@@ -24,24 +24,23 @@ const products = [
       "Какой бы материал вы ни выбрали – акриловый камень или кварцевый агломерат, в любом случае оконный проем с этим подоконником будет выглядеть роскошно, а многообразие цветовых решений и фактур, которые мы предлагаем, создадут пространство для вашего творчества и фантазии.",
   },
 
-
 ];
 
 export const ProductsPage = () => {
   return (
-    <div className={css.main}>
+    <section className={css.main}>
       <h1 className={css.title}>
         Найди новые идеи и вдохновись
       </h1>
       <div className={css.work}>
         {products.map((product) => (
-          <div key={product.title} className={css.wrapper}>
+          <article key={product.title} className={css.wrapper}>
             <img className={css.img} src={product.image} alt={product.title} />
             <h2 className={css.text}>{product.title}</h2>
             <p className={css.text}>{product.subtitle}</p>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

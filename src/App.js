@@ -10,7 +10,9 @@ export const App = () => {
       <Header />
       <ScrollToTop/>
       <BackToTopButton/>
-      <AppRouter />
+      <main>
+        <AppRouter />
+      </main>
       <Footer />
     </div>
   );

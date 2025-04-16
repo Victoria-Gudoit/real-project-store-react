@@ -27,18 +27,17 @@ const works = [
 
 export const OurWorks = () => {
   return (
-    <div className={css.main}>
+    <section className={css.main}>
       <h1 className={css.title}>Наши работы</h1>
       <div className={css.work}>
         {works.map((work) => (
-          <div key={work.title} className={css.wrapper}>
+          <article key={work.title} className={css.wrapper}>
             <img className={css.img} src={work.image} alt={work.title} />
             <h2 className={css.text}>{work.title}</h2>
             <p className={css.text}>{work.subtitle}</p>
-          </div>
+          </article>
         ))}
       </div>
-      
-    </div>
+    </section>
   );
 };
