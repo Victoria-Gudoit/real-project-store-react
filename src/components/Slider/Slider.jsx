@@ -17,6 +17,7 @@ import { MyButton } from "../UI/button/MyButton";
 import classNames from "classnames";
 import { Calculator } from "../CalculatorModal";
 import { useState } from "react";
+
 export const Slider = ({ swiperImages }) => {
   const [modalActive, setModalActive] = useState(false);
   const [heroSwiper, setSwiperRef] = useState(null);
@@ -51,7 +52,7 @@ export const Slider = ({ swiperImages }) => {
     heroSwiper.autoplay.stop();
   };
   return (
-    <div className="wrapper">
+    <section className="wrapper">
       <Swiper
         ref={heroSwiper}
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
@@ -87,6 +88,6 @@ export const Slider = ({ swiperImages }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };

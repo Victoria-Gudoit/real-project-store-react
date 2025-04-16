@@ -3,15 +3,15 @@ import css from "./about.module.css";
 
 export const AboutUs = () => {
   return (
-    <div className={css.about}>
+    <section className={css.about}>
       <div className={css.blockone}>
         <h1 className={css.title}>Каменная мастерская</h1>
         <div className={css.text}>
           <p className={css.paragraph}>
-            «Мастерская камня» — компания, специализирующаяся на изготовлении широкого
-            ассортимента изделий из кварцевого и акрилового камня, натурального
-            камня и полноформатной керамики (столешницы из натурального камня,
-            раковины, лестницы и многое другое).
+            «Мастерская камня» — компания, специализирующаяся на изготовлении
+            широкого ассортимента изделий из кварцевого и акрилового камня,
+            натурального камня и полноформатной керамики (столешницы из
+            натурального камня, раковины, лестницы и многое другое).
           </p>
           <ul className={css.list}>
             На сегодняшний день у нас собственная производственная база:
@@ -30,7 +30,6 @@ export const AboutUs = () => {
           </ul>
         </div>
         <div></div>
-
         <h2 className={css.title}>Почему выбирают нас?</h2>
         <div className={css.text}>
           <ul className={css.list}>
@@ -61,6 +60,6 @@ export const AboutUs = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
