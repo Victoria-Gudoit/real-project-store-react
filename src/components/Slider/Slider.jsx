@@ -71,7 +71,7 @@ export const Slider = ({ swiperImages }) => {
           <SwiperSlide key={swiperImage.image}>
             <img className="img" src={swiperImage.image} alt="" />
             <span className={circleClasses}></span>
-            <span className={titleClasses}>{swiperImage.title}</span>
+            <h1 className={titleClasses}>Мастерская <br /> интерьерных решений</h1>
             <span className={subTitleClasses}>{swiperImage.subtitle}</span>
             <MyButton
               to={`/${swiperImage.path}`}

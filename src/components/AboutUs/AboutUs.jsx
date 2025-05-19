@@ -5,7 +5,7 @@ export const AboutUs = () => {
   return (
     <section className={css.about}>
       <div className={css.blockone}>
-        <h1 className={css.title}>Каменная мастерская</h1>
+        <h1 className={css.title}>Мастерская интерьерных решений</h1>
         <div className={css.text}>
           <p className={css.paragraph}>
             «Мастерская камня» — компания, специализирующаяся на изготовлении

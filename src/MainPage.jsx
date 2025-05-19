@@ -6,14 +6,16 @@ import img02 from "./img/img-02.jpg";
 const swiperImages = [
   {
     image: img01,
-    title: "MODERN STONE PRODUCTS",
+    title: "МАСТЕРСКАЯ",
+    titleContinuous: "ИНТЕРЬЕРНЫХ РЕШЕНИЙ",
     subtitle: "вы можете у нас:",
     btn: "рассчитать стоимость",
     path: "calculator",
   },
   {
     image: img02,
-    title: "MODERN STONE PRODUCTS",
+    title: "МАСТЕРСКАЯ",
+    titleContinuous: "ИНТЕРЬЕРНЫХ РЕШЕНИЙ",
     subtitle: "вы можете у нас:",
     btn: "рассчитать стоимость",
     path: "materials",
